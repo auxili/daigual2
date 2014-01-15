@@ -20,7 +20,7 @@
     EntidadBancaria EntidadNueva = new EntidadBancaria(idEntidadBancaria, codigoEntidad, nombre, cif, tipoEntidadBancaria);
 
     entidadBancariaDAO.insert(EntidadNueva);
-    List<EntidadBancaria> entidadesBancarias = entidadBancariaDAO.findAll();
+
 %>
 <!DOCTYPE html>
 <html>
@@ -34,20 +34,6 @@
         <div align="center" style="margin: 60px 50px;"> 
             Entidad Bancaria 
             <h1>ENTIDAD BANCARIA INSERTADA</h1>
-            Mostrar todas
-
-            <table class="table table-striped"><th>ID</th><th>Codigo</th><th>CIF</th><th>Nombre</th><th>TIPO</th><tr>
-                    <% for (EntidadBancaria entidadBancaria : entidadesBancarias) {%>
-                    <td><%out.print(entidadBancaria.getId());%></td>
-                    <td><%out.print(entidadBancaria.getCodigoEntidad());%></td>
-                    <td><%out.print(entidadBancaria.getCif());%></td>
-                    <td><%out.print(entidadBancaria.getNombre());%></td>
-                    <td><%out.print(entidadBancaria.getTipoEntidadBancaria());%></td>
-                </tr>
-                <%
-                    }
-                %>
-            </table>
             <p><a href="index.jsp">Inicio</a></p>
         </div>
 

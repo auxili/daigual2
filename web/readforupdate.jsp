@@ -11,8 +11,6 @@
     String id = request.getParameter("id");
     Integer idEntidadBancaria = Integer.parseInt(id);
     EntidadBancaria entidadBancaria = entidadBancariaDAO.read(idEntidadBancaria);
-
-    List<EntidadBancaria> entidadesBancarias = entidadBancariaDAO.findAll();
 %>
 <!DOCTYPE html>
 <html>
@@ -43,7 +41,7 @@
                     <tr>
                         <td>
                             <select name="tipoEntidadBancaria">
-                                <option selected>Elije entidad</option>
+                                <option selected><%out.print(entidadBancaria.getTipoEntidadBancaria().name());%></option>
                                 <option value="<%= TipoEntidadBancaria.CajaAhorro.name()%>">Caja de ahorros</option>
                                 <option value="<%= TipoEntidadBancaria.Banco.name()%>">Banco</option>
                                 <option value="<%= TipoEntidadBancaria.CoopCredito.name()%>">Cooperativa Credito</option>

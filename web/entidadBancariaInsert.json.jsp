@@ -20,5 +20,5 @@
     EntidadBancaria EntidadNueva = new EntidadBancaria(idEntidadBancaria, codigoEntidad, nombre, cif, tipoEntidadBancaria);
 
     entidadBancariaDAO.insert(EntidadNueva);
-    List<EntidadBancaria> entidadesBancarias = entidadBancariaDAO.findAll();
+    //List<EntidadBancaria> entidadesBancarias = entidadBancariaDAO.findAll();
 %>

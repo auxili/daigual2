@@ -1,4 +1,3 @@
-
 package com.fpmislata.banco.datos;
 
 import org.hibernate.Session;
